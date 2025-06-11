@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formCadastro');
 
+    // Array para armazenar as necessidades cadastradas
+    let necessidades = JSON.parse(localStorage.getItem('necessidades')) || [];
+
     form.addEventListener('submit', function (e) {
         // Validação de e-mail ou telefone simples
         const contato = document.getElementById('contato').value.trim();
@@ -12,6 +15,28 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             return;
         }
+
+        // Salvar dados no array e no localStorage
+        e.preventDefault(); // Impede o envio do formulário
+
+        const novaNecessidade = {
+            instituicao: document.getElementById('instituicao').value,
+            tipoAjuda: document.getElementById('tipoAjuda').value,
+            titulo: document.getElementById('titulo').value,
+            descricao: document.getElementById('descricao').value,
+            cep: document.getElementById('cep').value,
+            rua: document.getElementById('rua').value,
+            bairro: document.getElementById('bairro').value,
+            cidade: document.getElementById('cidade').value,
+            estado: document.getElementById('estado').value,
+            contato: document.getElementById('contato').value
+        };
+
+        necessidades.push(novaNecessidade);
+        localStorage.setItem('necessidades', JSON.stringify(necessidades));
+
+        alert('Necessidade cadastrada com sucesso!');
+        form.reset();
     });
 
     // Integração com ViaCEP para preenchimento automático de endereço
@@ -40,3 +65,4 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
         }
     });
+});
