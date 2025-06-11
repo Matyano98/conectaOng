@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Necessidades | ConectaONG</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ConectaONG</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastrar Necessidade</a>
+            <a href="visualizacao.html">Visualizar Necessidades</a>
+        </nav>
+    </header>
 
+    <main>
+        <h2>Necessidades Cadastradas</h2>
+        <!-- Aqui serão exibidos os filtros, busca e lista de necessidades -->
+        <div id="filtros">
+            <input type="text" id="busca" placeholder="Buscar por palavra-chave...">
+            <select id="filtroTipoAjuda">
+                <option value="">Todos os Tipos</option>
+                <option value="Educação">Educação</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Meio Ambiente">Meio Ambiente</option>
+                <option value="Doação de Alimentos">Doação de Alimentos</option>
+                <option value="Doação de Roupas">Doação de Roupas</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </div>
+        <div id="listaNecessidades"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ConectaONG. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/visualizacao.js"></script>
+</body>
+</html>
