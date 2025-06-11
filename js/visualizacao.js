@@ -25,4 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
     // Carrega as necessidades do localStorage ao abrir a página
     const necessidades = JSON.parse(localStorage.getItem('necessidades')) || [];
     renderizarNecessidades(necessidades);
+
+    // Busca e filtro
+    const buscaInput = document.getElementById('busca');
+    const filtroTipoAjuda = document.getElementById('filtroTipoAjuda');
+
+    function filtrarENomear() {
+        const termo = (buscaInput.value || '').toLowerCase();
+        const tipo = filtroTipoAjuda.value;
+        const filtradas = necessidades.filter(n => {
+            const correspondeBusca =
+                n.titulo.toLowerCase().includes(termo) ||
+                n.descricao.toLowerCase().includes(termo);
+            const correspondeTipo = !tipo || n.tipoAjuda === tipo;
+            return correspondeBusca && correspondeTipo;
+        });
+        renderizarNecessidades(filtradas);
+    }
+
+    buscaInput.addEventListener('input', filtrarENomear);
+    filtroTipoAjuda.addEventListener('change', filtrarENomear);
 });
