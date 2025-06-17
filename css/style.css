@@ -105,3 +105,59 @@ main ul li a {
 main ul li a:hover {
     background: #40916c;
 }
+
+/* Formulário de cadastro */
+form#formCadastro {
+    background: #f8f9fa;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    max-width: 500px;
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form#formCadastro label {
+    font-weight: 600;
+    color: #2d6a4f;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+form#formCadastro input,
+form#formCadastro select,
+form#formCadastro textarea {
+    padding: 10px 12px;
+    border: 1px solid #95d5b2;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fff;
+    transition: border 0.2s;
+}
+
+form#formCadastro input:focus,
+form#formCadastro select:focus,
+form#formCadastro textarea:focus {
+    border: 1.5px solid #2d6a4f;
+    outline: none;
+}
+
+form#formCadastro button[type="submit"] {
+    background: #2d6a4f;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+form#formCadastro button[type="submit"]:hover {
+    background: #40916c;
+}
