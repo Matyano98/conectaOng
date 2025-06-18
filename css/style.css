@@ -161,3 +161,43 @@ form#formCadastro button[type="submit"] {
 form#formCadastro button[type="submit"]:hover {
     background: #40916c;
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 700px) {
+    main, form#formCadastro {
+        max-width: 98vw;
+        padding: 16px 4vw;
+        border-radius: 0;
+        margin: 16px 0 0 0;
+        box-shadow: none;
+    }
+
+    .logo-img {
+        height: 48px;
+    }
+
+    header {
+        padding: 12px 0 6px 0;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0 4px;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+    }
+
+    form#formCadastro input,
+    form#formCadastro select,
+    form#formCadastro textarea {
+        font-size: 0.98rem;
+        padding: 8px 8px;
+    }
+
+    main ul li a {
+        font-size: 0.98rem;
+        padding: 10px 18px;
+    }
+}
