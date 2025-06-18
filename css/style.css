@@ -265,3 +265,59 @@ footer {
 .redes-sociais a:hover {
     color: #40916c;
 }
+/* Página Quem Somos */
+main h2 {
+    color: #2d6a4f;
+    margin-bottom: 18px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+main h3 {
+    color: #40916c;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+main ul {
+    list-style: disc inside;
+    margin-bottom: 18px;
+    padding-left: 10px;
+}
+
+main ul li {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+main p, main ul {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+main a {
+    color: #2d6a4f;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+main a:hover {
+    color: #40916c;
+}
+
+@media (max-width: 700px) {
+    main h2 {
+        font-size: 1.4rem;
+    }
+    main h3 {
+        font-size: 1.1rem;
+    }
+    main p, main ul {
+        font-size: 0.98rem;
+    }
+}
