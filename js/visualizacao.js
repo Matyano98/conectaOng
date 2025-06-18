@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <p><strong>Instituição:</strong> ${n.instituicao}</p>
                 <p><strong>Tipo de Ajuda:</strong> ${n.tipoAjuda}</p>
                 <p><strong>Descrição:</strong> ${n.descricao}</p>
-                <p><strong>Endereço:</strong> ${n.rua}, ${n.bairro}, ${n.cidade} - ${n.estado} (${n.cep})</p>
+                <p><strong>Endereço:</strong> ${n.rua}, ${n.numero}, ${n.bairro}, ${n.cidade} - ${n.estado} (${n.cep})</p>
                 <p><strong>Contato:</strong> ${n.contato}</p>
             `;
             lista.appendChild(card);

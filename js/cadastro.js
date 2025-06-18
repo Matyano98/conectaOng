@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             descricao: document.getElementById('descricao').value,
             cep: document.getElementById('cep').value,
             rua: document.getElementById('rua').value,
+            numero: document.getElementById('numero').value,
             bairro: document.getElementById('bairro').value,
             cidade: document.getElementById('cidade').value,
             estado: document.getElementById('estado').value,
