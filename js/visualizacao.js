@@ -1,3 +1,20 @@
+function obterClasseTipoAjuda(tipoAjuda) {
+    switch (tipoAjuda) {
+        case 'Educação':
+            return 'ajuda-educacao';
+        case 'Saúde':
+            return 'ajuda-saude';
+        case 'Meio Ambiente':
+            return 'ajuda-meio-ambiente';
+        case 'Doação de Alimentos':
+            return 'ajuda-alimentos';
+        case 'Doação de Roupas':
+            return 'ajuda-roupas';
+        default:
+            return 'ajuda-outros';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const lista = document.getElementById('listaNecessidades');
 
@@ -8,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         necessidades.forEach(n => {
-            const card = document.createElement('div');
-            card.className = 'card-necessidade';
-            card.innerHTML = `
+            const cartao = document.createElement('div');
+            cartao.className = 'cartao-necessidade ' + obterClasseTipoAjuda(n.tipoAjuda);
+            cartao.innerHTML = `
                 <h3>${n.titulo}</h3>
                 <p><strong>Instituição:</strong> ${n.instituicao}</p>
                 <p><strong>Tipo de Ajuda:</strong> ${n.tipoAjuda}</p>
@@ -18,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <p><strong>Endereço:</strong> ${n.rua}, ${n.numero}, ${n.bairro}, ${n.cidade} - ${n.estado} (${n.cep})</p>
                 <p><strong>Contato:</strong> ${n.contato}</p>
             `;
-            lista.appendChild(card);
+            lista.appendChild(cartao);
         });
     }
 

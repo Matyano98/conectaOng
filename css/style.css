@@ -321,3 +321,74 @@ main a:hover {
         font-size: 0.98rem;
     }
 }
+
+/* Cartão de necessidade */
+.cartao-necessidade {
+    background: #f8f9fa;
+    border: 2px solid #95d5b2;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10);
+    padding: 24px 20px;
+    margin-bottom: 32px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: box-shadow 0.2s, border 0.2s;
+}
+
+.cartao-necessidade:hover {
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.18);
+    border-top-color: #40916c;
+    border-right-color: #40916c;
+    border-bottom-color: #40916c;
+}
+
+.cartao-necessidade h3 {
+    color: #2d6a4f;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.cartao-necessidade p {
+    margin: 8px 0;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+.cartao-necessidade strong {
+    color: #40916c;
+    font-weight: 600;
+}
+
+/* Responsividade para cartões */
+@media (max-width: 700px) {
+    .cartao-necessidade {
+        padding: 14px 8px;
+        border-radius: 10px;
+        font-size: 0.98rem;
+    }
+    .cartao-necessidade h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Cores diferentes para cada tipo de ajuda nos cartões */
+.ajuda-educacao {
+    border-left: 8px solid #4361ee; /* Azul para Educação */
+}
+.ajuda-saude {
+    border-left: 8px solid #e63946; /* Vermelho para Saúde */
+}
+.ajuda-meio-ambiente {
+    border-left: 8px solid #43aa8b; /* Verde para Meio Ambiente */
+}
+.ajuda-alimentos {
+    border-left: 8px solid #f9c74f; /* Amarelo para Doação de Alimentos */
+}
+.ajuda-roupas {
+    border-left: 8px solid #b5179e; /* Roxo para Doação de Roupas */
+}
+.ajuda-outros {
+    border-left: 8px solid #adb5bd; /* Cinza para Outros */
+}
