@@ -63,7 +63,7 @@ conectaong/
 ├── js/
 │   ├── cadastro.js           # Lógica do formulário
 │   └── visualizacao.js       # Renderização e filtros
-├── img/                      # Imagens do projeto (opcional)
+├── img/                      # Imagens do projeto
 ├── README.md                 # Documentação do projeto
 ```
 
